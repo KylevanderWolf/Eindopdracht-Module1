@@ -1,0 +1,263 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+
+
+  .grid-container {
+    margin: 10px;
+    display: grid;
+    background-color:  #272727;
+    height: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "header"
+    "name"
+    "image"
+    "information"
+    "ing"
+    "bereiden"
+    "video"
+    "footer";
+  }
+
+  .header{
+      grid-area: header;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+  .homebtn {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 20px;
+  
+  }
+  
+  
+  .contactbtn{
+    background-color: #EE585A;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: black;
+  }
+
+  .name {
+    grid-area: name;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .image {
+    grid-area: image;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .image img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .information{
+    grid-area: information;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: 10px;
+    line-height: 2em;
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .information ul li {
+    list-style: none;
+  }
+
+  .information i {
+    margin-right: 20px;
+    color: #EE585A
+  }
+
+  .ingredients{
+    grid-area: ing;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: 10px;
+    line-height: 2em;
+    font-size: 0.95em;
+    background-color: transparent;
+    color: white;
+   
+  }
+
+  .ingredients h2 {
+    width: 50%;
+    border-bottom: 2px solid #EE585A;
+  }
+  
+
+  .ingredients ul li {
+    list-style: none;
+  }
+
+  .ingredients i {
+    margin-right: 20px;
+    color: #EE585A
+  }
+
+  .bereiden{
+      grid-area: bereiden;
+      padding: 10px;
+      color: white;
+      font-size: 0.95em;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+
+  .bereiden h2 {
+    width: 30%;
+    border-bottom: 2px solid #EE585A;
+  }
+
+  .bereiden p {
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+
+  .video {
+    grid-area: video;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    height: auto;
+  
+  }
+
+  .video iframe {
+    width: 420px;
+    height: 330px;
+    border-radius: 10px;
+  }
+
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    grid-area: footer;
+  }
+
+
+
+/*Small screen/ laptops */
+@media screen and (min-width: 769px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas: 
+      "header header"
+      "name name"
+      "image information"
+      "iamge information"
+      "ing bereiden"
+      "video video"
+      "footer footer";
+    }
+   
+    .information{
+      justify-content: center;
+      line-height: 4em;
+    }
+  }
+
+
+/*Desktop */
+@media screen and (min-width: 1025px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas: 
+      "header header"
+      "name name"
+      "image information"
+      "iamge information"
+      "ing bereiden"
+      "video video"
+      "footer footer";
+    }
+
+    .image img{
+      width: 600px;
+    }
+
+    .video iframe {
+    width: 520px;
+    height: 330px;
+    }
+    }
+
+
+    
+/*Large screen */
+@media screen and (min-width: 1201px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas: 
+      "header header"
+      "name name"
+      "image information"
+      "iamge information"
+      "ing bereiden"
+      "video video"
+      "footer footer";
+    }
+    .image img{
+      width: 600px;
+    }
+  }
+  

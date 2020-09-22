@@ -1,0 +1,192 @@
+body, html {
+    height: 100%;
+    max-height: auto;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+  .grid-container {
+    height: 100%;
+    padding: 0;
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+    "header"
+    "form"
+    "footer"
+  }
+
+  .btn1{
+    height: 50%;
+    width: 10%;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    margin-left: 20px;
+
+    }
+
+    .navbar {
+      grid-area: header;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: center;
+      justify-content: flex-start;
+      background-color: transparent;
+  }
+
+
+  .formfield{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+form{
+  grid-area: form;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #000000;
+  padding: 40px;
+  width: auto;
+}
+
+form h1 {
+  font-size:1.6em;
+  color: white;
+  border-bottom: 2px solid #EE585A
+}
+
+.emailinput{
+  color: white;
+  width: 100%;
+  font-size: 1.3em;
+  margin: 20px 0px;
+}
+
+.emailinput input{
+  color: black;
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+
+button {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #EE585A;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 20px
+}
+
+.keuze {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.keuze label {
+  font-size: 1.4em;
+}
+
+.keuze input[type=checkbox] {
+  transform: scale(2);
+  cursor: pointer;
+  margin: 20px;
+}
+
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  grid-area: footer;
+  padding: 10px
+}
+
+/*Small screen/ laptops/ Tablet */
+@media only screen and (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+    "header"
+    "form"
+    "footer"
+  }
+  .emailinput input{
+    height: 35px;
+  }
+
+  form{
+    width: 600px;
+  }
+
+}
+
+
+/*Desktop */
+@media only screen and (min-width: 1025px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+    "header"
+    "form"
+    "footer"
+  }
+
+
+  }
+
+
+  
+/*Large screen */
+@media only screen and (min-width: 1201px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+    "header"
+    "form"
+    "footer"
+  }
+}
